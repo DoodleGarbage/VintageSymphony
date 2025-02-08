@@ -1,0 +1,16 @@
+{
+  "profiles": {
+    "Client": {
+      "commandName": "Executable",
+      "executablePath": "dotnet",
+      "commandLineArgs": "\"/data/Games/vintage-story-1-19/Vintagestory.dll\" --tracelog --addModPath \"$(ProjectDir)bin/$(Configuration)/../\"",
+      "workingDirectory": "/data/Games/vintage-story-1-19"
+    },
+    "Server": {
+      "commandName": "Executable",
+      "executablePath": "dotnet",
+      "commandLineArgs": "\"/data/Games/vintage-story-1-19/VintagestoryServer.dll\" --tracelog --addModPath \"$(ProjectDir)/bin/$(Configuration)/Mods\"",
+      "workingDirectory": "/data/Games/vintage-story-1-19"
+    }
+  }
+}

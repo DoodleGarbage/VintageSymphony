@@ -84,6 +84,7 @@ public class SituationalFactsCollector
 		UpdateEnemyDistance();
 		UpdateRiftDistance();
 		UpdateSunLevel();
+		UpdateAlive();
 
 		return facts;
 	}
@@ -227,6 +228,11 @@ public class SituationalFactsCollector
 		facts.SunLevel = VintageSymphony.ClientMain.playerProperties.sunSlight;
 	}
 
+	private void UpdateAlive()
+	{
+		facts.Alive = VintageSymphony.ClientMain.EntityPlayer.Alive;
+	}
+	
 	private static bool IsBedBlock(Block? block)
 	{
 		return block?.Code.PathStartsWith("bed") ?? false;
