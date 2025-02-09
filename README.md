@@ -5,7 +5,7 @@ This is a fork of the original Vintage Symphony, adding a few additional feature
 Music played on death ("Death Situation")
 
 ## Adding Music
-(Haven't checked if Vintage Symphony Assets downloads)
+(Haven't checked if Vintage Symphony Assets downloads) \n
 Following your first install of Vintage Symphony, load a world once, then continue:
 Find "vintage-symphony-assets_1.0.0.zip" in your mod folder.
 Unzip it somewhere.
