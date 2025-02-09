@@ -30,7 +30,7 @@ Create a new entry in musicconfig.json. Copy/Paste one of the other entries and 
 - "file": "file_name" (Excluding the .ogg) It must: be lowercase and use dashes, and the file must be .ogg, and you do not include the file's extension. Special characters don't tend to work well, the alphabet is reliable. Additonally, THE MUSIC FILE MUST BE .OGG, NO VIDEO
 - "title": "you can put anything in here" <- The title is displayed with .music info, or on the .music debug display.
 - "onPlayList": "survival|creative" <- This can be left alone unless you have a specific use case.
-- "situation": "idle|calm|adventure|danger|cave|temporalstorm" <- Note: You may need to play with priority to get a cave music track to play, and songs that play during temporalstorm will not sound right at all, due to the auditorial glitch effects from the temporal storm.
+- "situation": "idle|calm|adventure|danger|cave|temporalstorm|dead" <- Note: You may need to play with priority to get a cave music track to play, and songs that play during temporalstorm will not sound right at all, due to the auditorial glitch effects from the temporal storm.
 - "volume": 1.0 <- Whatever volume you desire. 1 tends to work most of the time. Can be 0.5, 1.2, etc.
 - Extra Properties. No comprehensive lists, scroll through the default music entries to find examples of the various properties. One notable property is "priority", this can be useful to prioritize/deprioritize a track.
 
