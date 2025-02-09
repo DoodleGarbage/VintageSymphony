@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 
@@ -11,27 +12,33 @@ public class ConsoleCommandSystem : ModSystem
 	public override void StartClientSide(ICoreClientAPI api)
 	{
 		base.StartClientSide(api);
+		api.ChatCommands.Create("music")
+			.WithDescription("Music related commands for Vintage Symphony.");
 		api.ChatCommands.Get("music")
 			.BeginSubCommand("next")
 			.WithDescription("Play the next track")
 			.HandleWith(NextTrack)
-			.EndSubCommand()
+			.EndSubCommand();
 			// --
-			.BeginSubCommand("info")
+		api.Logger.Error("Source 1");
+		api.ChatCommands.Get("music").BeginSubCommand("info")
 			.WithDescription("Displays the currently playing track")
 			.HandleWith(OutputCurrentTrack)
-			.EndSubCommand()
+			.EndSubCommand();
 			// --
-			.BeginSubCommand("stop")
+		api.Logger.Error("Source 2");
+		api.ChatCommands.Get("music").BeginSubCommand("stop")
 			.HandleWith(StopTrack)
-			.EndSubCommand()
+			.EndSubCommand();
 			// --
-			.BeginSubCommand("debug")
+		api.Logger.Error("Source 3");
+		api.ChatCommands.Get("music").BeginSubCommand("debug")
 			.WithDescription("Toggle debug overlay")
 			.HandleWith(ToggleDebugOverlay)
-			.EndSubCommand()
+			.EndSubCommand();
 			// --
-			.BeginSubCommand("config")
+		api.Logger.Error("Source 4");
+		api.ChatCommands.Get("music").BeginSubCommand("config")
 			.WithDescription("Toggle Vintage Symphony configuration")
 			.HandleWith(ToggleConfigurationDialog)
 			.EndSubCommand();

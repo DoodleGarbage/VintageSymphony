@@ -214,3 +214,5 @@ $RECYCLE.BIN/
 .DS_Store
 
 _NCrunch*
+.vscode/tasks.json
+.vscode/launch.json
