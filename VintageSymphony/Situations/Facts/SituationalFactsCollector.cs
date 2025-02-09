@@ -16,7 +16,7 @@ public class SituationalFactsCollector
 		public long Time;
 	}
 
-	private readonly string[] EnemyTypes = { "drifter", "locust", "wolf", "bear", "hyena", "bell", "eidolon" };
+	private readonly string[] EnemyTypes = { "drifter", "shiver", "bowtorn", "locust", "wolf", "bear", "hyena", "bell", "eidolon" };
 
 	private readonly AttributeStorage attributeStorage;
 	private EntityPlayer PlayerEntity => clientApi.World.Player.Entity;

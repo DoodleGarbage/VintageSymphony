@@ -20,24 +20,20 @@ public class ConsoleCommandSystem : ModSystem
 			.HandleWith(NextTrack)
 			.EndSubCommand();
 			// --
-		api.Logger.Error("Source 1");
 		api.ChatCommands.Get("music").BeginSubCommand("info")
 			.WithDescription("Displays the currently playing track")
 			.HandleWith(OutputCurrentTrack)
 			.EndSubCommand();
 			// --
-		api.Logger.Error("Source 2");
 		api.ChatCommands.Get("music").BeginSubCommand("stop")
 			.HandleWith(StopTrack)
 			.EndSubCommand();
 			// --
-		api.Logger.Error("Source 3");
 		api.ChatCommands.Get("music").BeginSubCommand("debug")
 			.WithDescription("Toggle debug overlay")
 			.HandleWith(ToggleDebugOverlay)
 			.EndSubCommand();
 			// --
-		api.Logger.Error("Source 4");
 		api.ChatCommands.Get("music").BeginSubCommand("config")
 			.WithDescription("Toggle Vintage Symphony configuration")
 			.HandleWith(ToggleConfigurationDialog)
@@ -87,7 +83,10 @@ public class ConsoleCommandSystem : ModSystem
 		{
 			return TextCommandResult.Success("&gt; no track playing");
 		}
-
+		if (track.isCaveMusic)
+		{
+			return TextCommandResult.Success($"&gt; {track.Title}, Cave Music");
+		}
 		return TextCommandResult.Success($"&gt; {track.Title} [{track.PositionString}]");
 	}
 

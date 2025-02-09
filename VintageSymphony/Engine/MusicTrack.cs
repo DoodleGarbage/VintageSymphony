@@ -52,7 +52,10 @@ public class MusicTrack : SurfaceMusicTrack
 	public virtual bool IsPlaying => IsActive;
 
 	public float SituationPriority = 1f;
-	
+
+	// Used for .music info to prevent a crash.
+	public bool isCaveMusic = false;
+
 	// track replacement options
 	public bool BreaksPause { get; protected set; }
 	public bool BreaksForcedPause { get; protected set; }
