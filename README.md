@@ -25,13 +25,13 @@ Alternatively, modify its musicconfig.json entry to Edit a track.
 
 Create a new entry in musicconfig.json. Copy/Paste one of the other entries and edit it:
 
-- "$type": "leave this the same"
-- "source": "you can put anything in here"
-- "file": "The name of your file. It must: be lowercase and use dashes, and the file must be .ogg, and you do not include the file's extension here." <- Special characters don't tend to work well, stick to the alphabet. Additonally, THE MUSIC FILE MUST BE .OGG
-- "title": "you can put anything in here"
-- "onPlayList": "leave this the same"
-- "situation": "idle|calm|adventure|danger|cave|temporalstorm" <- Note: You may need to play with priority to get a cave music track to play, and songs that play during temporalstorm will not sound right at all, due to the auditorial glitch affects from the temporal storm.
-- "volume": 1 <- Whatever volume you desire. 1 tends to work most of the time.
+- "$type": "VintageSymphony.Engine.MusicTrack, VintageSymphony" <- Leave this the same.
+- "source": "you can put anything in here" <- Displayed with .music info, typically the origin of the music: artist, show, etc.
+- "file": "file_name" (Excluding the .ogg) It must: be lowercase and use dashes, and the file must be .ogg, and you do not include the file's extension. Special characters don't tend to work well, the alphabet is reliable. Additonally, THE MUSIC FILE MUST BE .OGG, NO VIDEO
+- "title": "you can put anything in here" <- The title is displayed with .music info, or on the .music debug display.
+- "onPlayList": "survival|creative" <- This can be left alone unless you have a specific use case.
+- "situation": "idle|calm|adventure|danger|cave|temporalstorm" <- Note: You may need to play with priority to get a cave music track to play, and songs that play during temporalstorm will not sound right at all, due to the auditorial glitch effects from the temporal storm.
+- "volume": 1.0 <- Whatever volume you desire. 1 tends to work most of the time. Can be 0.5, 1.2, etc.
 - Extra Properties. No comprehensive lists, scroll through the default music entries to find examples of the various properties. One notable property is "priority", this can be useful to prioritize/deprioritize a track.
 
 Once you are done adding/modifying/removing tracks, add the assets folder (with your modified music) and the modinfo.json to a zip archive, then replace the original zip file in your mods folder. Recommended to use the exact same name for your new zip.
