@@ -1,16 +1,19 @@
 using System.Diagnostics;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
+using Vintagestory.GameContent;
 
 namespace VintageSymphony;
 
 // ReSharper disable once UnusedType.Global
 public class ConsoleCommandSystem : ModSystem
 {
+	private ICoreClientAPI api;
 	public override bool ShouldLoad(EnumAppSide forSide) => forSide == EnumAppSide.Client;
 
 	public override void StartClientSide(ICoreClientAPI api)
 	{
+		this.api = api;
 		base.StartClientSide(api);
 		api.ChatCommands.Create("music")
 			.WithDescription("Music related commands for Vintage Symphony.");
@@ -86,6 +89,16 @@ public class ConsoleCommandSystem : ModSystem
 		if (track.isCaveMusic)
 		{
 			return TextCommandResult.Success($"&gt; {track.Title}, Cave Music");
+		}
+		string track_position = "";
+		try 
+		{
+			track_position = track.PositionString;
+		}
+		catch (Exception e)
+		{
+			api.Logger.Error($"Tried to get track position for track {track.Title}, but failed! Error: {e}");
+			return TextCommandResult.Success($"&gt; {track.Title} [Track Position Not Available]");
 		}
 		return TextCommandResult.Success($"&gt; {track.Title} [{track.PositionString}]");
 	}
