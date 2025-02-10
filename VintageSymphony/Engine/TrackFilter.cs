@@ -12,6 +12,9 @@ public class TrackFilter
     {
         this.configuration = configuration;
         this.modId = modId;
+        if (modId == "vintage-symphony-120x") {
+            this.modId = "vintage-symphony";
+        }
     }
 
     public bool KeepTrack(IMusicTrack track)

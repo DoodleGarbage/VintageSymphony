@@ -1,10 +1,10 @@
 {
   "type": "code",
-  "modid": "vintage-symphony",
+  "modid": "vintage-symphony-120x",
   "name": "Vintage Symphony",
-  "author": "Haviland",
+  "author": "Haviland, DoodleGarbage",
   "description": "A situation-aware music engine replacement",
-  "version": "0.9.5.1",
+  "version": "0.9.6",
   "dependency": {
     "game": "*"
   },
