@@ -38,6 +38,10 @@ public class MusicTrack : SurfaceMusicTrack
 	[JsonProperty]
 	public float MaxWorldGenTemperature = 99;
 	
+	// Sunlight value is from in-game data.
+	[JsonProperty]
+	public float MaxSunlight = 32f;
+
 	[JsonProperty]
 	public float Volume = 1f;
 
