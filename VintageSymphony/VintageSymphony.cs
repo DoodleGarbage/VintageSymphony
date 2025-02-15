@@ -60,7 +60,7 @@ public class VintageSymphony : BaseModSystem
 			throw;
 		}
 
-		modDataPath = Path.Combine(api.DataBasePath, "Moddata", ModId, api.World.SavegameIdentifier);
+		modDataPath = Path.Combine(api.DataBasePath, "ModData", ModId, api.World.SavegameIdentifier);
 		if (!Directory.Exists(modDataPath))
 		{
 			Directory.CreateDirectory(modDataPath);
