@@ -48,3 +48,18 @@ A non .ogg file will crash the game if it gets played.
 
 Weird/non-standardized names (lowercase, dashes, no special characters) will tend to cause problems more often than not.
 
+### Extra Properties of Tracks:
+
+Here is a list of the extra properties a track can have as of the latest version, with example values (Some properties may be missing, but I believe all of them are here):
+
+- "priority": 1.00; The priority of the track when selecting between available. Recommended to increase this while adding additional restricitions using the other properties.
+- "minHour": 0; The minimum hour of the day before this track can be played. I believe it is a 24 hour day.
+- "maxHour": 12; The latest hour of the day this track can be played. Similar to minHour.
+- "minTemperature": -99: The lowest the temperature can be before this track can play.
+- "maxTemperature": 99: The highest the temperature can be before this track can play.
+- "minWorldGenTemperature": -99: Rather than the current temperature, this uses the temperature of the area set during worldgen.
+- "maxWorldGenTemperature": 99: Same as above, but for a maximum.
+- "minWorldGenRainfall": 0.0: The amount of rainfall the area recieves. Minimum.
+- "maxWorldGenRainfall": 1.0: The maximum of recieved rainfall.
+- "minSunlight": 0: The minimum amount of sunlight. This is from 'TrackedPlayerProperties.sunSlight', and I do not know if this is sunlight only or includes player lights.
+- "maxSunlight": 32: This may or may not work. Needs testing. Maximum amount of sunlight.
