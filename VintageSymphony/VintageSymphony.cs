@@ -95,8 +95,8 @@ public class VintageSymphony : BaseModSystem
 
 	public override void Dispose()
 	{
-		AttributeStorage.Dispose();
-		DebugOverlay.Dispose();
+		AttributeStorage?.Dispose();
+		DebugOverlay?.Dispose();
 		base.Dispose();
 	}
 }
